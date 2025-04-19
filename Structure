@@ -1,0 +1,21 @@
+diabetes-prediction/
+├── data/
+│   ├── raw/
+│   │   └── diabetes.csv
+│   └── processed/
+│       └── (optional: diabetes_cleaned.csv)
+├── config/
+│   ├── config.yaml
+│   └── README.md
+├── src/
+│   ├── __init__.py
+│   ├── data_preprocessing.py
+│   ├── eda.py
+│   ├── model_training.py
+│   ├── evaluation.py
+│   └── utils.py
+├── main.py
+├── requirements.txt
+├── environment.yml
+├── .gitignore
+└── README.md
