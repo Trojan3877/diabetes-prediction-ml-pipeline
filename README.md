@@ -6,6 +6,41 @@
 ![Capstone Project](https://img.shields.io/badge/project-capstone-blueviolet)
 ![Last Commit](https://img.shields.io/github/last-commit/Trojan3877/Diabetes-Prediction)
 
+diabetes-prediction-ml-pipeline/
+│
+├── config/
+│   └── config_sample.yaml
+│
+├── data/
+│   ├── sample.csv
+│   └── README.md
+│
+├── docs/
+│   ├── architecture.png
+│   ├── confusion_matrix.png
+│   └── roc_curve.png
+│
+├── notebooks/
+│   └── diabetes_prediction_workflow.ipynb
+│
+├── src/
+│   ├── preprocessing.py
+│   ├── train.py
+│   ├── evaluate.py
+│   └── predict.py
+│
+├── tests/
+│   └── test_preprocessing.py
+│
+├── .gitignore
+├── CONTRIBUTING.md
+├── LICENSE
+├── Makefile
+├── README.md
+├── requirements.txt
+├── setup.py
+└── CITATION.cff      ← optional
+
 ---
 
 ## 🚀 Project Overview
