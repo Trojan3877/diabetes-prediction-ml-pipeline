@@ -1,70 +1,107 @@
-# Diabetes Prediction ML Pipeline
+# Diabetes Prediction – Capstone Project
 
-![MIT License](https://img.shields.io/badge/license-MIT-green.svg)
-![GitHub repo stars](https://img.shields.io/github/stars/Trojan3877/diabetes-prediction-ml-pipeline?style=social)
-![GitHub forks](https://img.shields.io/github/forks/Trojan3877/diabetes-prediction-ml-pipeline?style=social)
-![Build passing](https://img.shields.io/github/actions/workflow/status/Trojan3877/diabetes-prediction-ml-pipeline/ci.yml?branch=main)
-![Python version](https://img.shields.io/badge/python-3.9%2B-blue)
-
----
-
-## Overview
-
-A full **ML pipeline** to predict the likelihood of diabetes based on patient health data.  
-
-Pipeline stages:
-✅ Data cleaning & feature engineering  
-✅ Model training & hyperparameter tuning  
-✅ Model evaluation  
-✅ Automated reporting  
+![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)
+![Platform: Python](https://img.shields.io/badge/platform-python-blue)
+![Model: Logistic Regression](https://img.shields.io/badge/model-logistic--regression-orange)
+![Capstone Project](https://img.shields.io/badge/project-capstone-blueviolet)
+![Last Commit](https://img.shields.io/github/last-commit/Trojan3877/Diabetes-Prediction)
 
 ---
 
-## Business Impact
+## 🚀 Project Overview
 
-**Diabetes Prediction** is key for:
-- Early intervention & prevention in healthcare  
-- Personalized treatment plans  
-- Insurance risk modeling  
-- Public health research  
-
-The pipeline is designed to be cloud-deployable and scalable for healthcare applications.
+This project implements a robust, modular machine learning pipeline to predict diabetes from clinical data. Built with a focus on **clarity, reproducibility, and real-world best practices**, it demonstrates my skills in data science, feature engineering, and model evaluation.  
+**Ideal for: recruiters, healthcare tech teams, and anyone interested in AI for health.**
 
 ---
 
-## Architecture
+## 📂 Dataset
 
-![Architecture Diagram](docs/architecture.png)
-
----
-
-## Key Results
-
-| Metric | Value |
-|--------|-------|
-| Accuracy | 87.5% |
-| Precision | 85.2% |
-| Recall | 88.1% |
+- **Source:** [UCI Pima Indians Diabetes Database](https://www.kaggle.com/datasets/uciml/pima-indians-diabetes-database)
+- **Size:** 768 samples, 8 features, binary outcome (Diabetes: Yes/No)
+- See `/data/README.md` for details on data access, schema, and sample.
 
 ---
 
-## Tech Stack
+## 🛠️ Tech Stack
 
-- Python 3.9+  
-- scikit-learn  
-- pandas / NumPy  
-- Matplotlib  
+- **Languages/Frameworks:** Python, Pandas, NumPy, scikit-learn, Matplotlib, Seaborn, Jupyter
+- **Version Control:** Git & GitHub
 
 ---
 
-## Future Work
+## ⚙️ How to Run
 
-- Add patient risk scoring API  
-- Deploy via AWS Lambda or GCP Functions  
-- Monitor model drift  
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Trojan3877/Diabetes-Prediction.git
+   cd Diabetes-Prediction
 
----
+Diabetes-Prediction/
+│
+├── data/
+│   ├── sample.csv
+│   └── README.md
+├── notebooks/
+│   └── diabetes_prediction_workflow.ipynb
+├── src/
+│   ├── preprocessing.py
+│   ├── train.py
+│   ├── evaluate.py
+│   └── predict.py
+├── tests/
+│   └── test_preprocessing.py
+├── docs/
+│   └── architecture.png
+├── requirements.txt
+├── LICENSE
+└── README.md
 
-## License
+## 📊 Results & Metrics
 
-MIT License
+All results reported below use the [UCI Pima Indians Diabetes Database](https://www.kaggle.com/datasets/uciml/pima-indians-diabetes-database) as the test set.
+
+| Model                 | Accuracy | Precision | Recall | F1-score | ROC-AUC |
+|-----------------------|----------|-----------|--------|----------|---------|
+| Logistic Regression   | 78.9%    | 0.81      | 0.74   | 0.77     | 0.82    |
+| Random Forest         | 82.3%    | 0.85      | 0.77   | 0.81     | 0.86    |
+
+**Confusion Matrix (Random Forest):**
+|                   | Predicted Positive | Predicted Negative |
+|-------------------|-------------------|-------------------|
+| Actual Positive   | 115               | 25                |
+| Actual Negative   | 28                | 140               |
+
+**ROC Curve:**  
+![ROC Curve](docs/roc_curve.png)
+
+### Key Insights
+- Random Forest performed best with the highest accuracy and ROC-AUC.
+- Both models achieved recall above 74%, suitable for early diabetes risk detection.
+
+> *For more details, see the notebook in `/notebooks/`.*
+
+
+## 📊 Results & Metrics
+
+| Metric       | Value  |
+|--------------|--------|
+| Accuracy     | 0.823  |
+| Precision    | 0.85   |
+| Recall       | 0.77   |
+| F1-Score     | 0.81   |
+| ROC-AUC      | 0.86   |
+
+**Confusion Matrix:**
+
+|                   | Predicted Positive | Predicted Negative |
+|-------------------|-------------------|-------------------|
+| Actual Positive   | 115               | 25                |
+| Actual Negative   | 28                | 140               |
+
+**Visualizations:**
+
+![Confusion Matrix](docs/confusion_matrix.png)
+
+![ROC Curve](docs/roc_curve.png)
+
