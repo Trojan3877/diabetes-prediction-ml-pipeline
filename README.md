@@ -1,10 +1,10 @@
-# Diabetes Prediction – Capstone Project
+# Diabetes Prediction ML Pipeline
 
+![Last Commit](https://img.shields.io/github/last-commit/Trojan3877/diabetes-prediction-ml-pipeline)
+![CI](https://github.com/Trojan3877/diabetes-prediction-ml-pipeline/actions/workflows/ci.yml/badge.svg)
 ![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)
 ![Platform: Python](https://img.shields.io/badge/platform-python-blue)
-![Model: Logistic Regression](https://img.shields.io/badge/model-logistic--regression-orange)
-![Capstone Project](https://img.shields.io/badge/project-capstone-blueviolet)
-![Last Commit](https://img.shields.io/github/last-commit/Trojan3877/Diabetes-Prediction)
+![Project: Capstone](https://img.shields.io/badge/project-capstone-blueviolet)
 
 diabetes-prediction-ml-pipeline/
 │
