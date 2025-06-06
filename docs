@@ -1,0 +1,4 @@
+docs/
+├── architecture.png         ← diagram of “Data → Preprocess → Train → Evaluate”
+├── confusion_matrix.png     ← from your code above
+└── roc_curve.png            ← from your code above
