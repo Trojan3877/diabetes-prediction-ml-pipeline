@@ -1,0 +1,11 @@
+diabetes-prediction-ml-pipeline/CITATION.cff
+
+cff-version: 1.2.0
+message: "If you use this code, please cite it as below."
+authors:
+  - family-names: Leath
+    given-names: Corey
+title: "Diabetes Prediction ML Pipeline"
+version: "0.1.0"
+date-released: 2025-06-06
+url: "https://github.com/Trojan3877/diabetes-prediction-ml-pipeline"
