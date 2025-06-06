@@ -1,0 +1,6 @@
+src/
+├── preprocessing.py    ← functions to handle missing values, feature scaling, train/test split
+├── train.py            ← loads data, runs `model.fit(...)`, saves a serialized model (pickle or joblib)
+├── evaluate.py         ← loads the saved model, computes metrics (accuracy, precision, recall, AUC) 
+                        and saves plots (`docs/confusion_matrix.png`, `docs/roc_curve.png`)
+└── predict.py          ← example CLI script that loads new CSV rows and outputs predictions
