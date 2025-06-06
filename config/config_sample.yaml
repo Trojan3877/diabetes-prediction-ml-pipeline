@@ -1,0 +1,24 @@
+# Sample configuration for Diabetes Prediction ML Pipeline
+
+data:
+  # Path to the CSV (you can replace with full dataset path if unzipped)
+  train_csv: data/sample.csv
+  test_size: 0.2          # proportion of data reserved for testing
+  random_seed: 42
+
+model:
+  logistic_regression:
+    C: 1.0                # inverse of regularization strength
+    max_iter: 1000
+
+  random_forest:
+    n_estimators: 100
+    max_depth: 5
+
+output:
+  # Where to save trained model (pickle or joblib)
+  model_path: models/diabetes_model.pkl
+
+  # Where to save evaluation images
+  confusion_matrix_image: docs/confusion_matrix.png
+  roc_curve_image: docs/roc_curve.png
