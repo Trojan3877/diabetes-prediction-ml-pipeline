@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  notebook:
+    build: .
+    ports:
+      - "8888:8888"
+    command: jupyter lab --ip=0.0.0.0 --allow-root
+  pipeline:
+    build: .
+    volumes:
+      - ./:/app
+    command: python src/train.py --config config/config.yaml
