@@ -216,7 +216,7 @@ Diagram file: `docs/pipeline_flowchart.png`
 **Corey Leath (Trojan3877)**  
 Aspiring AI/ML Engineer • Software Developer • Future UPenn AI Master's Student  
 GitHub: https://github.com/Trojan3877  
-LinkedIn: *Add your link here*
+LinkedIn: *https://linkedin.com/in/corey-leath*
 
 ---
 
