@@ -3,6 +3,9 @@ A full production-style machine learning pipeline for predicting diabetes using 
 This project demonstrates **end-to-end ML engineering**, including data preprocessing, feature engineering, model training, evaluation, reproducibility, and modular Python package design.
 
 ---
+<p align="center">
+  <img src="https://files.catbox.moe/6l8x9i.png" width="100%" alt="Diabetes Prediction ML Pipeline Banner">
+</p>
 ## 🧱 System Architecture Overview
 
 ```
