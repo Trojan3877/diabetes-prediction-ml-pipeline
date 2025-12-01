@@ -1,0 +1,38 @@
+Diabetes_Prediction_ML_Pipeline/
+│
+├── config/
+│   └── config.yaml
+│
+├── data/
+│   ├── raw/
+│   │   └── diabetes.csv
+│   └── processed/
+│
+├── notebooks/
+│   └── eda.ipynb
+│
+├── src/
+│   ├── __init__.py
+│   ├── data_loader.py
+│   ├── preprocess.py
+│   ├── train.py
+│   ├── evaluate.py
+│   └── utils.py
+│
+├── models/
+│   └── model.pkl
+│
+├── tests/
+│   ├── test_preprocess.py
+│   ├── test_train.py
+│   └── test_evaluate.py
+│
+├── docs/
+│   ├── architecture.png
+│   ├── model_performance.png
+│   └── pipeline_flowchart.png
+│
+├── requirements.txt
+├── metrics.md
+├── README.md
+└── .gitignore
