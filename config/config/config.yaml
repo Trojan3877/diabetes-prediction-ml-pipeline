@@ -1,0 +1,19 @@
+dataset:
+  raw_path: "data/raw/diabetes.csv"
+  processed_path: "data/processed/diabetes_processed.csv"
+
+preprocessing:
+  test_size: 0.2
+  random_state: 42
+  scaling: true
+
+model:
+  type: "random_forest"
+  n_estimators: 200
+  max_depth: 6
+  random_state: 42
+
+output:
+  model_path: "models/model.pkl"
+  metrics_path: "metrics.md"
+  performance_plot: "docs/model_performance.png"
