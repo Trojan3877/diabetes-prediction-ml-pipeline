@@ -1,142 +1,148 @@
-# Diabetes Prediction ML Pipeline
+# 🧬 Diabetes Prediction ML Pipeline  
+A full production-style machine learning pipeline for predicting diabetes using structured health data.  
+This project demonstrates **end-to-end ML engineering**, including data preprocessing, feature engineering, model training, evaluation, reproducibility, and modular Python package design.
 
-![Last Commit](https://img.shields.io/github/last-commit/Trojan3877/diabetes-prediction-ml-pipeline)
-![CI](https://github.com/Trojan3877/diabetes-prediction-ml-pipeline/actions/workflows/ci.yml/badge.svg)
-![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)
-![Platform: Python](https://img.shields.io/badge/platform-python-blue)
-![Project: Capstone](https://img.shields.io/badge/project-capstone-blueviolet)
+---
 
-diabetes-prediction-ml-pipeline/
+## 🚀 Project Highlights
+
+- ✔ **Fully modular ML codebase** (ready for expansion or deployment)  
+- ✔ **Config-driven pipeline** (YAML configuration for reproducible experiments)  
+- ✔ **Feature engineering + scaling + train/test splitting**  
+- ✔ **Random Forest + Logistic Regression baseline**  
+- ✔ **Production-ready structure** used by major tech companies  
+- ✔ **Automated evaluation + metrics + plots**  
+- ✔ **Tests folder for PyTest unit testing**  
+- ✔ **Suitable for L5/L6 ML Engineer interview portfolio**
+
+---
+
+# 📂 Folder Structure
+
+```
+Diabetes_Prediction_ML_Pipeline/
 │
 ├── config/
-│   └── config_sample.yaml
+│   └── config.yaml
 │
 ├── data/
-│   ├── sample.csv
-│   └── README.md
+│   ├── raw/
+│   └── processed/
+│
+├── notebooks/
+│   └── eda.ipynb
+│
+├── src/
+│   ├── data_loader.py
+│   ├── preprocess.py
+│   ├── train.py
+│   ├── evaluate.py
+│   └── utils.py
+│
+├── models/
+│   └── model.pkl
+│
+├── tests/
 │
 ├── docs/
 │   ├── architecture.png
-│   ├── confusion_matrix.png
-│   └── roc_curve.png
+│   ├── pipeline_flowchart.png
+│   └── model_performance.png
 │
-├── notebooks/
-│   └── diabetes_prediction_workflow.ipynb
-│
-├── src/
-│   ├── preprocessing.py
-│   ├── train.py
-│   ├── evaluate.py
-│   └── predict.py
-│
-├── tests/
-│   └── test_preprocessing.py
-│
-├── .gitignore
-├── CONTRIBUTING.md
-├── LICENSE
-├── Makefile
-├── README.md
+├── metrics.md
 ├── requirements.txt
-├── setup.py
-└── CITATION.cff      ← optional
-
----
-
-## 🚀 Project Overview
-
-This project implements a robust, modular machine learning pipeline to predict diabetes from clinical data. Built with a focus on **clarity, reproducibility, and real-world best practices**, it demonstrates my skills in data science, feature engineering, and model evaluation.  
-**Ideal for: recruiters, healthcare tech teams, and anyone interested in AI for health.**
-
----
-
-## 📂 Dataset
-
-- **Source:** [UCI Pima Indians Diabetes Database](https://www.kaggle.com/datasets/uciml/pima-indians-diabetes-database)
-- **Size:** 768 samples, 8 features, binary outcome (Diabetes: Yes/No)
-- See `/data/README.md` for details on data access, schema, and sample.
-
----
-
-## 🛠️ Tech Stack
-
-- **Languages/Frameworks:** Python, Pandas, NumPy, scikit-learn, Matplotlib, Seaborn, Jupyter
-- **Version Control:** Git & GitHub
-
----
-
-## ⚙️ How to Run
-
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/Trojan3877/Diabetes-Prediction.git
-   cd Diabetes-Prediction
-
-Diabetes-Prediction/
-│
-├── data/
-│   ├── sample.csv
-│   └── README.md
-├── notebooks/
-│   └── diabetes_prediction_workflow.ipynb
-├── src/
-│   ├── preprocessing.py
-│   ├── train.py
-│   ├── evaluate.py
-│   └── predict.py
-├── tests/
-│   └── test_preprocessing.py
-├── docs/
-│   └── architecture.png
-├── requirements.txt
-├── LICENSE
 └── README.md
+```
 
-## 📊 Results & Metrics
+---
 
-All results reported below use the [UCI Pima Indians Diabetes Database](https://www.kaggle.com/datasets/uciml/pima-indians-diabetes-database) as the test set.
+# 🔧 Installation
 
-| Model                 | Accuracy | Precision | Recall | F1-score | ROC-AUC |
-|-----------------------|----------|-----------|--------|----------|---------|
-| Logistic Regression   | 78.9%    | 0.81      | 0.74   | 0.77     | 0.82    |
-| Random Forest         | 82.3%    | 0.85      | 0.77   | 0.81     | 0.86    |
+```bash
+git clone https://github.com/Trojan3877/Diabetes_Prediction_ML_Pipeline
+cd Diabetes_Prediction_ML_Pipeline
+pip install -r requirements.txt
+```
 
-**Confusion Matrix (Random Forest):**
-|                   | Predicted Positive | Predicted Negative |
-|-------------------|-------------------|-------------------|
-| Actual Positive   | 115               | 25                |
-| Actual Negative   | 28                | 140               |
+---
 
-**ROC Curve:**  
-![ROC Curve](docs/roc_curve.png)
+# ⚙️ Run the Pipeline
 
-### Key Insights
-- Random Forest performed best with the highest accuracy and ROC-AUC.
-- Both models achieved recall above 74%, suitable for early diabetes risk detection.
+### **1. Preprocess Data**
+```bash
+python src/preprocess.py
+```
 
-> *For more details, see the notebook in `/notebooks/`.*
+### **2. Train Model**
+```bash
+python src/train.py
+```
 
+### **3. Evaluate Model**
+```bash
+python src/evaluate.py
+```
 
-## 📊 Results & Metrics
+Evaluation metrics will be written to:
 
-| Metric       | Value  |
-|--------------|--------|
-| Accuracy     | 0.823  |
-| Precision    | 0.85   |
-| Recall       | 0.77   |
-| F1-Score     | 0.81   |
-| ROC-AUC      | 0.86   |
+- `metrics.md`  
+- `/docs/model_performance.png`  
+- console output
 
-**Confusion Matrix:**
+---
 
-|                   | Predicted Positive | Predicted Negative |
-|-------------------|-------------------|-------------------|
-| Actual Positive   | 115               | 25                |
-| Actual Negative   | 28                | 140               |
+# 📊 Model Performance (Summary)
 
-**Visualizations:**
+| Metric | Score (placeholder) |
+|-------|----------------------|
+| Accuracy | 0.89 |
+| Precision | 0.84 |
+| Recall | 0.80 |
+| F1 Score | 0.82 |
+| ROC-AUC | 0.91 |
 
-![Confusion Matrix](docs/confusion_matrix.png)
+Full metrics in `metrics.md`.
 
-![ROC Curve](docs/roc_curve.png)
+---
+
+# 📈 Pipeline Architecture
+
+```
+RAW CSV → Preprocess → Split → Train Model → Evaluate → Metrics / Plots → model.pkl
+```
+
+Diagram file: `docs/pipeline_flowchart.png`
+
+---
+
+# 🧱 Tech Stack
+
+- Python 3.10+
+- NumPy, Pandas
+- Scikit-learn
+- Matplotlib / Seaborn
+- PyTest
+- YAML config management
+- Joblib (model persistence)
+
+---
+
+# 📘 Future Enhancements
+
+- Add MLflow experiment tracking  
+- Add FastAPI inference endpoint  
+- Add Dockerfile for containerization  
+- Add Snowflake feature store  
+- Add CI/CD pipeline  
+- Add Streamlit dashboard  
+
+---
+
+# 🏆 Author  
+**Corey Leath (Trojan3877)**  
+Aspiring AI/ML Engineer • Software Developer • Future UPenn AI Master's Student  
+GitHub: https://github.com/Trojan3877  
+LinkedIn: *Add your link here*
+
+---
 
