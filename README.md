@@ -1,3 +1,46 @@
+
+<p align="center">
+
+  <!-- Python Version -->
+  <img src="https://img.shields.io/badge/Python-3.10+-blue?style=for-the-badge&logo=python&logoColor=white"/>
+
+  <!-- Machine Learning -->
+  <img src="https://img.shields.io/badge/Machine%20Learning-Scikit--Learn-yellow?style=for-the-badge&logo=scikitlearn&logoColor=white"/>
+
+  <!-- Data Processing -->
+  <img src="https://img.shields.io/badge/Data%20Pipeline-Pandas-orange?style=for-the-badge&logo=pandas&logoColor=white"/>
+
+  <!-- Model Type -->
+  <img src="https://img.shields.io/badge/Model-RandomForest-success?style=for-the-badge&logo=treehouse&logoColor=white"/>
+
+  <!-- ML Engineering -->
+  <img src="https://img.shields.io/badge/ML%20Engineering-Production%20Pipeline-red?style=for-the-badge&logo=githubactions&logoColor=white"/>
+
+  <!-- Code Quality -->
+  <img src="https://img.shields.io/badge/Code_Style-PEP8-green?style=for-the-badge"/>
+
+  <!-- Testing -->
+  <img src="https://img.shields.io/badge/Tests-PyTest-brightgreen?style=for-the-badge&logo=pytest&logoColor=white"/>
+
+  <!-- File Structure -->
+  <img src="https://img.shields.io/badge/Structure-Modular_Architecture-purple?style=for-the-badge"/>
+
+  <!-- Config -->
+  <img src="https://img.shields.io/badge/Config-YAML-blue?style=for-the-badge&logo=yaml&logoColor=white"/>
+
+  <!-- Joblib -->
+  <img src="https://img.shields.io/badge/Model%20Persistence-Joblib-9cf?style=for-the-badge"/>
+
+  <!-- Repository Stats -->
+  <img src="https://img.shields.io/github/last-commit/Trojan3877/Diabetes_Prediction_ML_Pipeline?style=for-the-badge&color=blue"/>
+  <img src="https://img.shields.io/github/repo-size/Trojan3877/Diabetes_Prediction_ML_Pipeline?style=for-the-badge&color=orange"/>
+
+  <!-- Visitors -->
+  <img src="https://komarev.com/ghpvc/?username=Trojan3877&label=VIEWS&style=for-the-badge&color=brightgreen"/>
+
+</p>
+
+
 # 🧬 Diabetes Prediction ML Pipeline  
 A full production-style machine learning pipeline for predicting diabetes using structured health data.  
 This project demonstrates **end-to-end ML engineering**, including data preprocessing, feature engineering, model training, evaluation, reproducibility, and modular Python package design.
