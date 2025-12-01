@@ -1,42 +1,41 @@
-
 <p align="center">
 
   <!-- Python Version -->
-  <img src="https://img.shields.io/badge/Python-3.10+-blue?style=for-the-badge&logo=python&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Python-3.10+-white?style=for-the-badge&logo=python&logoColor=3776AB&labelColor=ffffff"/>
 
   <!-- Machine Learning -->
-  <img src="https://img.shields.io/badge/Machine%20Learning-Scikit--Learn-yellow?style=for-the-badge&logo=scikitlearn&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Machine%20Learning-Scikit--Learn-white?style=for-the-badge&logo=scikitlearn&logoColor=f7931e&labelColor=ffffff"/>
 
   <!-- Data Processing -->
-  <img src="https://img.shields.io/badge/Data%20Pipeline-Pandas-orange?style=for-the-badge&logo=pandas&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Data%20Pipeline-Pandas-white?style=for-the-badge&logo=pandas&logoColor=150458&labelColor=ffffff"/>
 
-  <!-- Model Type -->
-  <img src="https://img.shields.io/badge/Model-RandomForest-success?style=for-the-badge&logo=treehouse&logoColor=white"/>
+  <!-- Random Forest Model -->
+  <img src="https://img.shields.io/badge/Model-RandomForest-white?style=for-the-badge&logo=treehouse&logoColor=228B22&labelColor=ffffff"/>
 
-  <!-- ML Engineering -->
-  <img src="https://img.shields.io/badge/ML%20Engineering-Production%20Pipeline-red?style=for-the-badge&logo=githubactions&logoColor=white"/>
+  <!-- ML Engineering Pipeline -->
+  <img src="https://img.shields.io/badge/ML%20Engineering-Production%20Pipeline-white?style=for-the-badge&logo=githubactions&logoColor=black&labelColor=ffffff"/>
 
-  <!-- Code Quality -->
-  <img src="https://img.shields.io/badge/Code_Style-PEP8-green?style=for-the-badge"/>
+  <!-- Code Style -->
+  <img src="https://img.shields.io/badge/Code%20Style-PEP8-white?style=for-the-badge&labelColor=ffffff"/>
 
-  <!-- Testing -->
-  <img src="https://img.shields.io/badge/Tests-PyTest-brightgreen?style=for-the-badge&logo=pytest&logoColor=white"/>
+  <!-- Tests -->
+  <img src="https://img.shields.io/badge/Tests-PyTest-white?style=for-the-badge&logo=pytest&logoColor=0A9EDC&labelColor=ffffff"/>
 
-  <!-- File Structure -->
-  <img src="https://img.shields.io/badge/Structure-Modular_Architecture-purple?style=for-the-badge"/>
+  <!-- Architecture -->
+  <img src="https://img.shields.io/badge/Architecture-Modular-white?style=for-the-badge&logo=buffer&logoColor=black&labelColor=ffffff"/>
 
   <!-- Config -->
-  <img src="https://img.shields.io/badge/Config-YAML-blue?style=for-the-badge&logo=yaml&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Config-YAML-white?style=for-the-badge&logo=yaml&logoColor=CB171E&labelColor=ffffff"/>
 
-  <!-- Joblib -->
-  <img src="https://img.shields.io/badge/Model%20Persistence-Joblib-9cf?style=for-the-badge"/>
+  <!-- Persistence -->
+  <img src="https://img.shields.io/badge/Artifacts-Joblib-white?style=for-the-badge&labelColor=ffffff"/>
 
-  <!-- Repository Stats -->
-  <img src="https://img.shields.io/github/last-commit/Trojan3877/Diabetes_Prediction_ML_Pipeline?style=for-the-badge&color=blue"/>
-  <img src="https://img.shields.io/github/repo-size/Trojan3877/Diabetes_Prediction_ML_Pipeline?style=for-the-badge&color=orange"/>
+  <!-- Repository Analytics -->
+  <img src="https://img.shields.io/github/last-commit/Trojan3877/Diabetes_Prediction_ML_Pipeline?style=for-the-badge&color=white&labelColor=ffffff"/>
+  <img src="https://img.shields.io/github/repo-size/Trojan3877/Diabetes_Prediction_ML_Pipeline?style=for-the-badge&color=white&labelColor=ffffff"/>
 
   <!-- Visitors -->
-  <img src="https://komarev.com/ghpvc/?username=Trojan3877&label=VIEWS&style=for-the-badge&color=brightgreen"/>
+  <img src="https://komarev.com/ghpvc/?username=Trojan3877&label=Views&style=for-the-badge&color=white"/>
 
 </p>
 
