@@ -3,7 +3,50 @@ A full production-style machine learning pipeline for predicting diabetes using 
 This project demonstrates **end-to-end ML engineering**, including data preprocessing, feature engineering, model training, evaluation, reproducibility, and modular Python package design.
 
 ---
+## 🧱 System Architecture Overview
 
+```
+                ┌─────────────────────────┐
+                │       Raw Dataset       │
+                │    (diabetes.csv)       │
+                └─────────────┬───────────┘
+                              │
+                              ▼
+                ┌─────────────────────────┐
+                │     Data Preprocessing  │
+                │ - Missing value checks  │
+                │ - Scaling (Standard)    │
+                │ - Train/Test Split      │
+                └─────────────┬───────────┘
+                              │
+                ┌─────────────▼──────────────┐
+                │      Feature Matrix (X)     │
+                │      Target Vector (y)      │
+                └─────────────┬──────────────┘
+                              │
+                              ▼
+                ┌─────────────────────────┐
+                │       Model Training     │
+                │  (RandomForest / LR)     │
+                │ - Fit                    │
+                │ - Save model.pkl         │
+                └─────────────┬───────────┘
+                              │
+                ┌─────────────▼──────────────┐
+                │        Evaluation           │
+                │ - Accuracy / F1 / ROC-AUC   │
+                │ - Confusion Matrix Plot     │
+                │ - Writes metrics.md         │
+                └─────────────┬──────────────┘
+                              │
+                              ▼
+                ┌─────────────────────────┐
+                │     Deployment Ready     │
+                │ - model.pkl              │
+                │ - scaler.pkl             │
+                │ - metrics.md             │
+                └─────────────────────────┘
+```
 ## 🚀 Project Highlights
 
 - ✔ **Fully modular ML codebase** (ready for expansion or deployment)  
