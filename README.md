@@ -1,4 +1,9 @@
 <p align="center">
+  <img src="https://files.catbox.moe/2u0jtn.png" width="100%" alt="Diabetes Prediction ML Pipeline Banner">
+</p>
+
+
+<p align="center">
 
   <!-- Python Version -->
   <img src="https://img.shields.io/badge/Python-3.10+-white?style=for-the-badge&logo=python&logoColor=3776AB&labelColor=ffffff"/>
