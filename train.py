@@ -1,42 +1,38 @@
-import yaml
 import joblib
-import pandas as pd
-from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import LogisticRegression
-from pathlib import Path
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
+from .data_preprocessing import load_data, preprocess_data, train_test_split_data
 
+def train_models(data_path="data/diabetes.csv"):
+    X, y, df = load_data(data_path)
 
-def train_model():
-    """Train ML model using processed dataset & save trained artifact."""
+    X_scaled, scaler = preprocess_data(X)
+    X_train, X_test, y_train, y_test = train_test_split_data(X_scaled, y)
 
-    config = yaml.safe_load(open("config/config.yaml"))
+    models = {
+        "logistic_regression": LogisticRegression(max_iter=500),
+        "random_forest": RandomForestClassifier(n_estimators=200)
+    }
 
-    processed_path = config["dataset"]["processed_path"]
-    model_path = config["output"]["model_path"]
+    results = {}
 
-    df = pd.read_csv(processed_path)
+    for name, model in models.items():
+        model.fit(X_train, y_train)
+        preds = model.predict(X_test)
 
-    X_train = df.drop("Outcome", axis=1)
-    y_train = df["Outcome"]
+        results[name] = {
+            "accuracy": accuracy_score(y_test, preds),
+            "precision": precision_score(y_test, preds),
+            "recall": recall_score(y_test, preds),
+            "f1": f1_score(y_test, preds)
+        }
 
-    # Choose model
-    if config["model"]["type"] == "random_forest":
-        model = RandomForestClassifier(
-            n_estimators=config["model"]["n_estimators"],
-            max_depth=config["model"]["max_depth"],
-            random_state=config["model"]["random_state"],
-        )
-    else:
-        model = LogisticRegression(max_iter=1000)
+        joblib.dump(model, f"models/{name}.pkl")
 
-    model.fit(X_train, y_train)
+    joblib.dump(scaler, "models/scaler.pkl")
 
-    # Save model
-    Path("models").mkdir(parents=True, exist_ok=True)
-    joblib.dump(model, model_path)
-
-    print(f"✅ Model trained and saved to {model_path}")
-
+    return results
 
 if __name__ == "__main__":
-    train_model()
+    print(train_models())
