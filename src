@@ -1,6 +1,86 @@
-src/
-├── preprocessing.py    ← functions to handle missing values, feature scaling, train/test split
-├── train.py            ← loads data, runs `model.fit(...)`, saves a serialized model (pickle or joblib)
-├── evaluate.py         ← loads the saved model, computes metrics (accuracy, precision, recall, AUC) 
-                        and saves plots (`docs/confusion_matrix.png`, `docs/roc_curve.png`)
-└── predict.py          ← example CLI script that loads new CSV rows and outputs predictions
+import os
+import json
+import joblib
+from openai import OpenAI
+
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+
+def load_model(model_name="random_forest"):
+    model_path = f"models/{model_name}.pkl"
+    scaler_path = "models/scaler.pkl"
+
+    if not os.path.exists(model_path):
+        raise FileNotFoundError(f"Model not found: {model_path}")
+
+    model = joblib.load(model_path)
+    scaler = joblib.load(scaler_path)
+    return model, scaler
+
+
+def explain_prediction_with_llm(features: dict, prediction: int, probability: float, rag_context: str = ""):
+    """
+    Uses GPT-4.1 to explain ML model predictions + context from RAG.
+    """
+
+    prompt = f"""
+You are a medical AI assistant with expertise in diabetes risk analysis.
+
+INPUT DATA:
+- Patient features: {json.dumps(features, indent=2)}
+- Model binary prediction (1 = high risk, 0 = low risk): {prediction}
+- Model confidence: {round(probability, 4)}
+
+RAG CONTEXT (Medical research summary and dataset insights):
+{rag_context}
+
+TASKS:
+1. Explain the prediction in clear, human-friendly language.
+2. Identify which features contributed the most to this prediction.
+3. Provide a short clinical interpretation grounded in the RAG research.
+4. Give practical next-step recommendations (NOT medical advice — just general wellness insights).
+5. Summarize the reliability and limitations of this prediction.
+
+Your tone should be professional, concise, and accessible.
+"""
+
+    response = client.chat.completions.create(
+        model="gpt-4.1",
+        messages=[{"role": "user", "content": prompt}],
+        temperature=0.4
+    )
+
+    return response.choices[0].message["content"]
+
+
+def explain_model_metrics(metrics: dict, rag_context: str = ""):
+    """
+    Sends evaluation metrics to GPT-4.1 for interpretation.
+    """
+
+    prompt = f"""
+You are an AI model auditor specializing in medical ML systems.
+
+MODEL EVALUATION METRICS:
+{json.dumps(metrics, indent=2)}
+
+RAG CONTEXT (clinical evidence + dataset patterns):
+{rag_context}
+
+TASK:
+Provide a detailed explanation of:
+- Strengths of the model
+- Weaknesses or biases
+- How well this model may generalize to different populations
+- Common failure modes in diabetes prediction models
+- What improvements could meaningfully increase accuracy
+
+Write this in a structured, professional way.
+"""
+
+    response = client.chat.completions.create(
+        model="gpt-4.1",
+        messages=[{"role": "user", "content": prompt}],
+        temperature=0.3
+    )
+
+    return response.choices[0].message["content"]
