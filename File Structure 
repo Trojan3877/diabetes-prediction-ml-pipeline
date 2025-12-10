@@ -1,38 +1,37 @@
 Diabetes_Prediction_ML_Pipeline/
 │
-├── config/
-│   └── config.yaml
-│
-├── data/
-│   ├── raw/
-│   │   └── diabetes.csv
-│   └── processed/
-│
-├── notebooks/
-│   └── eda.ipynb
-│
 ├── src/
-│   ├── __init__.py
-│   ├── data_loader.py
-│   ├── preprocess.py
+│   ├── data_preprocessing.py
 │   ├── train.py
 │   ├── evaluate.py
+│   ├── predict.py
+│   ├── explain_llm.py
+│   ├── rag_pipeline.py
+│   ├── mcp_tools.py
 │   └── utils.py
 │
+├── api/
+│   └── main.py
+│
+├── ui/
+│   └── app.py
+│
 ├── models/
-│   └── model.pkl
+│
+├── data/
+│   └── diabetes.csv
+│
+├── vectorstore/
 │
 ├── tests/
-│   ├── test_preprocess.py
-│   ├── test_train.py
-│   └── test_evaluate.py
+│   ├── test_model.py
+│   ├── test_rag.py
+│   └── test_api.py
 │
-├── docs/
-│   ├── architecture.png
-│   ├── model_performance.png
-│   └── pipeline_flowchart.png
-│
-├── requirements.txt
 ├── metrics.md
+├── architecture_diagram.png (I will generate soon)
+├── requirements.txt
+├── Dockerfile
+├── .github/workflows/ci.yml
 ├── README.md
-└── .gitignore
+└── LICENSE
