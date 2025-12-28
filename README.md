@@ -29,8 +29,7 @@
 
   <!-- Persistence -->
   <img src="https://img.shields.io/badge/Artifacts-Joblib-white?style=for-the-badge&labelColor=ffffff"/>
-
-  <!-- Repository Analytics -->
+<!-- Repository Analytics -->
   <img src="https://img.shields.io/github/last-commit/Trojan3877/Diabetes_Prediction_ML_Pipeline?style=for-the-badge&color=white&labelColor=ffffff"/>
   <img src="https://img.shields.io/github/repo-size/Trojan3877/Diabetes_Prediction_ML_Pipeline?style=for-the-badge&color=white&labelColor=ffffff"/>
 
