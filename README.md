@@ -257,7 +257,19 @@ Diagram file: `docs/pipeline_flowchart.png`
 - Add CI/CD pipeline  
 - Add Streamlit dashboard  
 
----
+Design Questions & Reflections
+Q: What problem does this project aim to solve?
+A: This project aims to build a structured machine learning pipeline for predicting diabetes risk, moving beyond prototype notebooks to something closer to a real-world workflow. The goal was to explore how different stages — data cleaning, feature engineering, model training, and evaluation — interact when organized as a coherent system.
+Q: Why did I choose this pipeline architecture instead of a quick notebook?
+A: I chose a modular pipeline because ML systems in practice aren’t one big script — they have distinct stages that need to be repeatable, testable, and reusable. This structure made it easier for me to isolate issues, evaluate performance at each stage, and think about how data changes propagate through the model.
+Q: What were the main trade-offs I made?
+A: The trade-off was between rapid experimentation and long-term clarity. A single notebook might have let me iterate faster early on, but it wouldn’t have been maintainable or easy to reason about. By structuring the pipeline, I gained clarity and reproducibility, even if it slowed the early phase of development.
+Q: What didn’t work as expected?
+A: At first, feature scaling and preprocessing decisions caused inconsistent performance across validation splits, which was frustrating. Rather than tuning hyperparameters blindly, I stepped back and improved the data standardization logic, which made results more stable and interpretable.
+Q: What did I learn from building this project?
+A: I learned that ML performance is often more about data and pipeline quality than model choice. Investing time in cleaning and validating data improved overall results more than switching to more complex models. I also learned how important clear evaluation metrics are for trusting model behavior.
+Q: If I had more time or resources, what would I improve next?
+A: I would add better cross-validation and automated testing for each pipeline stage, and experiment with calibration techniques to better align model confidence with real risk levels. I’d also explore ways to visualize decision boundaries and how feature importance shifts across different cohorts.
 
 # 🏆 Author  
 **Corey Leath (Trojan3877)**  
