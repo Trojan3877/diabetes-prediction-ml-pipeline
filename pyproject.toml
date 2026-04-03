@@ -1,21 +1,26 @@
-from setuptools import setup, find_packages
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
 
-setup(
-    name="diabetes_prediction_ml_pipeline",
-    version="0.1.0",
-    packages=find_packages(where="src"),
-    package_dir={"": "src"},
-    install_requires=[
-        "pandas",
-        "numpy",
-        "scikit-learn",
-        "matplotlib",
-        "seaborn",
-    ],
-    entry_points={
-        "console_scripts": [
-            "diabetes-train=src.train:main",
-            "diabetes-evaluate=src.evaluate:main",
-        ],
-    },
-)
+[project]
+name = "diabetes-prediction-ml-pipeline"
+version = "0.1.0"
+requires-python = ">=3.9"
+dependencies = [
+    "pandas",
+    "numpy",
+    "scikit-learn",
+    "matplotlib",
+    "seaborn",
+    "joblib",
+    "pyyaml",
+    "openai",
+    "chromadb",
+]
+
+[project.scripts]
+diabetes-train = "src.train:main"
+diabetes-evaluate = "src.evaluate:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests", "test"]
