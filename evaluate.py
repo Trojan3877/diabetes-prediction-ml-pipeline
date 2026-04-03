@@ -1,15 +1,19 @@
-import joblib
-from sklearn.metrics import classification_report
-from .data_preprocessing import load_data, preprocess_data
+"""Root-level evaluation entry point (delegates to src.evaluate)."""
 
-def evaluate_model(model_path, data_path="data/diabetes.csv"):
-    model = joblib.load(model_path)
-    scaler = joblib.load("models/scaler.pkl")
+from src.evaluate import evaluate
 
-    X, y, df = load_data(data_path)
-    X_scaled = scaler.transform(X)
 
-    preds = model.predict(X_scaled)
+def evaluate_model(model_name: str = "random_forest", data_path: str = "data/sample.csv") -> dict:
+    """Evaluate a trained model. Delegates to src.evaluate.evaluate."""
+    return evaluate(model_name=model_name, data_path=data_path)
 
-    report = classification_report(y, preds, output_dict=True)
-    return report
+
+if __name__ == "__main__":
+    report = evaluate_model()
+    for label, metrics in report.items():
+        if isinstance(metrics, dict):
+            print(f"\n{label}:")
+            for metric, value in metrics.items():
+                print(f"  {metric}: {value:.4f}")
+        else:
+            print(f"\n{label}: {metrics:.4f}")

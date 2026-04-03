@@ -1,22 +1,5 @@
-import pandas as pd
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import StandardScaler
+"""Root-level preprocessing module (delegates to src.data_preprocessing)."""
 
-def load_data(path: str):
-    df = pd.read_csv(path)
+from src.data_preprocessing import load_data, preprocess_data, train_test_split_data
 
-    # Basic cleaning
-    df = df.dropna()
-
-    X = df.drop("Outcome", axis=1)
-    y = df["Outcome"]
-
-    return X, y, df
-
-def preprocess_data(X):
-    scaler = StandardScaler()
-    X_scaled = scaler.fit_transform(X)
-    return X_scaled, scaler
-
-def train_test_split_data(X, y, test_size=0.2, random_state=42):
-    return train_test_split(X, y, test_size=test_size, random_state=random_state)
+__all__ = ["load_data", "preprocess_data", "train_test_split_data"]

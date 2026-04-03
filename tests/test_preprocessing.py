@@ -1,5 +1,3 @@
-diabetes-prediction-ml-pipeline/tests/test_preprocessing.py
-
 import pandas as pd
 import pytest
 from src.preprocessing import clean_missing_values
@@ -30,5 +28,3 @@ def test_clean_missing_values_replaces_zero():
     # Check that other columns remain unchanged
     assert (df_cleaned["Age"] == df["Age"]).all()
     assert (df_cleaned["Outcome"] == df["Outcome"]).all()
-
-pytest

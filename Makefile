@@ -1,13 +1,16 @@
-.PHONY: install train evaluate clean
+.PHONY: install train evaluate test clean
 
 install:
 	pip install -r requirements.txt
 
 train:
-	python src/train.py --config config/config.yaml
+	python -m src.train
 
 evaluate:
-	python src/evaluate.py --model-path models/diabetes_model.pkl --test-data data/sample.csv
+	python -m src.evaluate
+
+test:
+	pytest tests/ test/ -v
 
 clean:
-	rm -rf __pycache__/ models/ *.pyc
+	rm -rf __pycache__/ models/ *.pyc src/__pycache__/

@@ -6,3 +6,5 @@ seaborn
 joblib
 pyyaml
 pytest
+openai
+chromadb
