@@ -1,42 +1,13 @@
-<p align="center">
-
-  <!-- Python Version -->
-  <img src="https://img.shields.io/badge/Python-3.10+-white?style=for-the-badge&logo=python&logoColor=3776AB&labelColor=ffffff"/>
-
-  <!-- Machine Learning -->
-  <img src="https://img.shields.io/badge/Machine%20Learning-Scikit--Learn-white?style=for-the-badge&logo=scikitlearn&logoColor=f7931e&labelColor=ffffff"/>
-
-  <!-- Data Processing -->
-  <img src="https://img.shields.io/badge/Data%20Pipeline-Pandas-white?style=for-the-badge&logo=pandas&logoColor=150458&labelColor=ffffff"/>
-
-  <!-- Random Forest Model -->
-  <img src="https://img.shields.io/badge/Model-RandomForest-white?style=for-the-badge&logo=treehouse&logoColor=228B22&labelColor=ffffff"/>
-
-  <!-- ML Engineering Pipeline -->
-  <img src="https://img.shields.io/badge/ML%20Engineering-Production%20Pipeline-white?style=for-the-badge&logo=githubactions&logoColor=black&labelColor=ffffff"/>
-
-  <!-- Code Style -->
-  <img src="https://img.shields.io/badge/Code%20Style-PEP8-white?style=for-the-badge&labelColor=ffffff"/>
-
-  <!-- Tests -->
-  <img src="https://img.shields.io/badge/Tests-PyTest-white?style=for-the-badge&logo=pytest&logoColor=0A9EDC&labelColor=ffffff"/>
-
-  <!-- Architecture -->
-  <img src="https://img.shields.io/badge/Architecture-Modular-white?style=for-the-badge&logo=buffer&logoColor=black&labelColor=ffffff"/>
-
-  <!-- Config -->
-  <img src="https://img.shields.io/badge/Config-YAML-white?style=for-the-badge&logo=yaml&logoColor=CB171E&labelColor=ffffff"/>
-
-  <!-- Persistence -->
-  <img src="https://img.shields.io/badge/Artifacts-Joblib-white?style=for-the-badge&labelColor=ffffff"/>
-<!-- Repository Analytics -->
-  <img src="https://img.shields.io/github/last-commit/Trojan3877/Diabetes_Prediction_ML_Pipeline?style=for-the-badge&color=white&labelColor=ffffff"/>
-  <img src="https://img.shields.io/github/repo-size/Trojan3877/Diabetes_Prediction_ML_Pipeline?style=for-the-badge&color=white&labelColor=ffffff"/>
-
-  <!-- Visitors -->
-  <img src="https://komarev.com/ghpvc/?username=Trojan3877&label=Views&style=for-the-badge&color=white"/>
-
-</p>
+![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python)
+![Machine Learning](https://img.shields.io/badge/Machine%20Learning-Pipeline-orange)
+![Scikit-learn](https://img.shields.io/badge/Scikit--learn-Classification-f7931e?logo=scikitlearn)
+![Healthcare](https://img.shields.io/badge/Use%20Case-Diabetes%20Prediction-red)
+![Data Science](https://img.shields.io/badge/Data%20Science-End--to--End-purple)
+![Status](https://img.shields.io/badge/Status-Portfolio%20Ready-brightgreen)
+![License](https://img.shields.io/badge/License-MIT-green)
+![Last Commit](https://img.shields.io/github/last-commit/Trojan3877/diabetes-prediction-ml-pipeline)
+![Repo Size](https://img.shields.io/github/repo-size/Trojan3877/diabetes-prediction-ml-pipeline)
+![Stars](https://img.shields.io/github/stars/Trojan3877/diabetes-prediction-ml-pipeline?style=social)
 
 
 # 🧬 Diabetes Prediction ML Pipeline  
